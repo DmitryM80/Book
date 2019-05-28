@@ -4,19 +4,30 @@
 body
 	/*font-family 'Roboto Slab', serif*/
  	/*font-family 'Open Sans', sans-serif*/
+ 
+img
+	max-width 100%
+	height auto
  	
 .site-main
 	background-color $bg-green
-
+	background-image linear-gradient(to bottom right, $grad-top, $grad-bot)
+	//padding 0 190px
+	
+	
 .header
-	display flex	
+	max-width 1070px
+	margin 0 auto
+	display flex
+	color $wht	
 	justify-content space-between
 	align-items center
 	flex-wrap wrap
+	
 
 .header-logo
 	background-image url(../img/logo.svg)
-	width 132px
+	width 134px
 	height 31px
 	display block
 	background-size cover
@@ -26,5 +37,122 @@ body
 	display flex
 	justify-content flex-end
 	li
-		margin-left 15px
+		margin-left 20px
+		padding-bottom 5px
+		letter-spacing 0.5px
+		border-bottom 3px solid transparent
+		transition .3s
+		&:hover
+			border-bottom 3px solid $lt-green
+	li.current
+		border-bottom 3px solid $lt-green
+		
+.wrap
+	max-width 1070px
+	margin 0 auto
+	color $wht
+	
+	
+.block-book
+	display flex
+	padding 8rem 0
+	justify-content space-between
+.main-book
+	background-image url(../img/book.svg)
+	background-size cover
+	//background-repeat no-repeat
+	width 447px
+	height 643px
+	//margin-right 25px
+	//margin-bottom 25px
+	//padding-left 2rem
+	//box-sizing border-box
+	text-align center
+	flex-basis 470px
+		
+	.title
+		padding-top 4rem
+	.quote
+		color $lt-green
+		font-size .8rem
+	.author
+		color $lt-green
+		vertical-align bottom
+		display inline-block
+		width 90%
+		text-align left
+		margin-top 11rem
+			
+	
+		
+.block-text
+	flex-basis calc(100% - 530px)
+	//padding-right 100px
+	box-sizing border-box
+	//display inline-block
+	.block-text-name
+		font-size 18px	
+	.description
+		display block
+	p
+		font-size 15px
+		line-height 24px
+		letter-spacing .7px
+
+.block-text-title
+	font-size 48px
+	letter-spacing 1.8px
+	margin-bottom 40px
+	span
+		font-size 1rem
+		color $lt-green
+		display block
+		font-size 18px
+		letter-spacing .9px
+	
+.green-button
+	color $wht
+	background-color $lt-green
+	font-size 18px
+	letter-spacing .7px
+	text-align center
+	padding 1rem 2rem
+	text-decoration none
+	display block
+	border-radius 3px
+	margin 1rem 0 1rem
+	box-shadow 2px 2px $green-shadow
+	max-width 250px
+	margin 48px 0 20px
+	padding 14px 0
+	
+/* About author */
+
+.container-author
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	padding 8rem 190px
+	
+.about-author
+	display block
+	width 60%
+	.book-author
+		color $lt-gray
+	
+.portrait
+	display block
+	width 35%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
