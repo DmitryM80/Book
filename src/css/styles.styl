@@ -1,9 +1,11 @@
 @import 'normalize.css'
+@import 'fontello.css'
 @require 'colors.styl'
 
 body
 	/*font-family 'Roboto Slab', serif*/
  	/*font-family 'Open Sans', sans-serif*/
+ 	line-height 24px
  
 img
 	max-width 100%
@@ -11,9 +13,7 @@ img
  	
 .site-main
 	background-color $bg-green
-	background-image linear-gradient(to bottom right, $grad-top, $grad-bot)
-	//padding 0 190px
-	
+	background-image linear-gradient(to bottom right, $grad-top, $grad-bot)	
 	
 .header
 	max-width 1070px
@@ -22,8 +22,7 @@ img
 	color $wht	
 	justify-content space-between
 	align-items center
-	flex-wrap wrap
-	
+	flex-wrap wrap	
 
 .header-logo
 	background-image url(../img/logo.svg)
@@ -50,8 +49,7 @@ img
 .wrap
 	max-width 1070px
 	margin 0 auto
-	color $wht
-	
+	color $wht	
 	
 .block-book
 	display flex
@@ -60,36 +58,30 @@ img
 .main-book
 	background-image url(../img/book.svg)
 	background-size cover
-	//background-repeat no-repeat
 	width 447px
 	height 643px
-	//margin-right 25px
-	//margin-bottom 25px
-	//padding-left 2rem
-	//box-sizing border-box
 	text-align center
-	flex-basis 470px
-		
+	flex-basis 470px		
 	.title
 		padding-top 4rem
+		font-size 36px
 	.quote
 		color $lt-green
-		font-size .8rem
+		font-size 14px
 	.author
 		color $lt-green
 		vertical-align bottom
 		display inline-block
 		width 90%
 		text-align left
-		margin-top 11rem
+		margin-top 24rem
+		margin-left 5rem
 			
 	
 		
 .block-text
 	flex-basis calc(100% - 530px)
-	//padding-right 100px
 	box-sizing border-box
-	//display inline-block
 	.block-text-name
 		font-size 18px	
 	.description
@@ -97,7 +89,7 @@ img
 	p
 		font-size 15px
 		line-height 24px
-		letter-spacing .7px
+		letter-spacing .75px
 
 .block-text-title
 	font-size 48px
@@ -116,11 +108,9 @@ img
 	font-size 18px
 	letter-spacing .7px
 	text-align center
-	padding 1rem 2rem
 	text-decoration none
 	display block
 	border-radius 3px
-	margin 1rem 0 1rem
 	box-shadow 2px 2px $green-shadow
 	max-width 250px
 	margin 48px 0 20px
@@ -130,29 +120,210 @@ img
 
 .container-author
 	display flex
-	flex-wrap wrap
 	justify-content space-between
-	padding 8rem 190px
+	padding 160px 100px
+	max-width 1070px
 	
 .about-author
-	display block
-	width 60%
+	width 50%
+	p
+		color $dk-gray
 	.book-author
-		color $lt-gray
-	
+		color $dk-gray
+	.a-name
+		font-size 48px
+		letter-spacing 1.8px
+		span
+			font-size 18px
+			display block
+			color $lt-green
+			letter-spacing .75px
+			
 .portrait
+	position relative	
+	.svg
+		position absolute
+		z-index -1
+		right 0
+	.image
+		margin-top 45px
+		max-width initial
+		margin-right 45px
+	
+.counter
+	display flex
+	justify-content space-evenly
+	text-align center
+	padding 0 90px 104px
+	p
+		font-size 18px
+		&:first-child
+			margin-left -10px
+		span
+			display block
+			font-size 64px
+			color $lt-green
+			font-weight thin
+			margin-bottom 5px
+
+/* Book content */
+.book-content
+	background-color $lt-bg
+	
+	h3
+		font-size 22px
+		margin-bottom 11px
+	p
+		margin-top 5px
+		letter-spacing 1.2px
+		font-size 14px
+		
+	
+.content-title
+.others-title
+	text-align center
+	h2
+		margin-top 18px
+		font-size 36px
+		letter-spacing 4px
+		margin-left -15px
+		span
+			margin-top 10px
+			font-size 16px
+			display block
+			color darken($lt-green, 20%)
+			letter-spacing .7px
+
+.content
+.others
+	max-width 1070px
+	padding 100px 170px 200px
+.about-details
+	padding-top 10px
+	display flex
+	justify-content space-between
+	.about
+		flex-basis 40%
+		p
+			line-height 19px
+			letter-spacing .4px
+	
+.con-table
+	flex-basis 50%
+	ol
+		margin 0
+		padding 5px 0 0 0px
+		counter-reset list
+		column-count 2
+		column-gap 5px
+		&>li
+			counter-increment list
+			list-style-type none
+			position relative
+			padding-left 29px
+			margin-bottom 10px
+			font-size 14px
+			line-height 15px
+			letter-spacing 0.34px
+			&::before
+				content counter(list)". "
+			&::after
+				content "+"
+				position absolute
+				left 0
+				top 0
+				color $wht
+				padding 1px 5px
+				//background-color $lt-green
+				background-color $dk-green
+		
+.green-button-more
+	margin-top 20px
+	background-color $lt-green
+	color $wht
+	padding 8px 0
+	width 109px
+	box-shadow 2px 2px $green-shadow
+	max-width 250px
+	border-radius 3px
+
+.feat-icons
+	margin-left 5px
+	color darken($lt-green, 20%)
+	font-size 16px
+	.icon-amazon
+		vertical-align middle
+	i
+		margin-left 5px
+
+/* Other books */
+.other-books
+	padding-top 30px
+	margin-left -10px
+	display flex
+	justify-content space-around
+
+.o-book
+	flex-basis 23%
+	.cover
+		color $lt-green
+		height 320px
+		background-image url(../img/book.svg)
+		background-size cover
+		position relative
+		h3
+			position absolute
+			left 3.6rem
+			top 2.5rem
+			text-transform uppercase
+			color $wht
+		span
+			display block
+			font-size 10px
+			text-transform none
+			color $lt-green
+			letter-spacing .6px
+			margin-left -10px
+			margin-top 4px
+		small
+			position absolute
+			bottom 24px
+			left 3.5rem
+			font-size 10px
+			letter-spacing .8px
+.o-book-desc
+	margin-top 27px
+	h3
+		text-align center
+		margin-bottom 10px
+		letter-spacing 2.2px
+	p
+		margin-top 0
+		font-size 14px
+		line-height 19px
+		letter-spacing .4px
+		margin 10px -20px 18px
+.read-more
 	display block
-	width 35%
+	text-align center
+	text-transform uppercase
+	font-size 12px
+	color $lt-green
+	letter-spacing .6px
+	margin-left -5px
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+.all-books-div
+	text-align center
+	padding-top 78px
+.all-books-btn
+	background-color $lt-green
+	color $wht
+	text-decoration none
+	padding 9px 25px
+	max-width 250px
+	margin-left -20px
+	letter-spacing 0.7px
+	border-radius 3px
+	//box-shadow 2px 2px $green-shadow
+	&::before
+		display block
