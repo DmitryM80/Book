@@ -324,6 +324,17 @@ img
 	margin-left -20px
 	letter-spacing 0.7px
 	border-radius 3px
+	position relative
+	//text-align center
 	//box-shadow 2px 2px $green-shadow
 	&::before
 		display block
+		position absolute
+		width 100%
+		height 20px
+		background-color $green-shadow
+		content ''
+		left 0
+		bottom -3px
+		z-index -1
+		border-radius 3px
